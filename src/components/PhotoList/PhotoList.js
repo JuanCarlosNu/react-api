@@ -20,7 +20,7 @@ class PhotoList extends Component{
 
             });
 
-            console.log(data.data.photos);
+           // console.log(data.data.photos);
             this.setState({
                 photos: data.data.photos 
             }
