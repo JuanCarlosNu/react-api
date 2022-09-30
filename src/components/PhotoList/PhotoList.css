@@ -1,0 +1,9 @@
+.title { 
+    font-size: 1.6rem;
+    text-align: center;
+}
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+
+}

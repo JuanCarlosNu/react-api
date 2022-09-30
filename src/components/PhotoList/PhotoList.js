@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import PhotoItem from '../PhotoItem/PhotoItem';
+import './PhotoList.css'
 
 class PhotoList extends Component{
 
@@ -32,10 +33,12 @@ class PhotoList extends Component{
         console.log(this.state.photos)
         return (
             <div>
-                <p>We have{this.state.photos.length} photos</p>
+                <p className='title'>We have{this.state.photos.length} photos</p>
+                <div className='photos'>
                 {
                     this.state.photos.map( photo => <PhotoItem key={photo.id} photo={photo}/>)
                 }
+                </div>
             </div>
 
             );
