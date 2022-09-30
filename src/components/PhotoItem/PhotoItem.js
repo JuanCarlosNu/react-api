@@ -6,5 +6,4 @@ const PhotoItem = () => {
     );
 }
  
-export default PhotoItem
-<div>Item</div>;
+export default PhotoItem;
