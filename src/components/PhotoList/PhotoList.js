@@ -8,13 +8,16 @@ class PhotoList extends Component{
         console.log("construtor")
     }
 
-    componentDidMount() {
-        axios.get('https://api.pexels.com/v1/curated' , {
+    async componentDidMount() {
+       
+       const data = await axios.get('https://api.pexels.com/v1/curated' , {
             headers: {
                 Authorization: '563492ad6f91700001000001222a1b07d24c45f1becfb732668b565a'
             }
 
-            })
+            });
+
+            console.log(data.data.photos);
         }
 
     render() {
