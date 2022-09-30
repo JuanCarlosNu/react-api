@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import PhotoItem from '../PhotoItem/PhotoItem';
 
 class PhotoList extends Component{
 
     constructor() {
         super();
-        console.log("construtor")
+        this.state = {
+            photos:[]
+        }
     }
 
     async componentDidMount() {
@@ -18,13 +21,23 @@ class PhotoList extends Component{
             });
 
             console.log(data.data.photos);
+            this.setState({
+                photos: data.data.photos 
+            }
+
+            )
         }
 
     render() {
-        console.log("render")
+        console.log(this.state.photos)
         return (
+            <div>
+                <p>We have{this.state.photos.length} photos</p>
+                {
+                    this.state.photos.map( photo => <PhotoItem key={photo.id} photo={photo}/>)
+                }
+            </div>
 
-            <div>photos</div>
             );
     }
 }
