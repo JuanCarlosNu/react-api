@@ -1,8 +1,10 @@
 import React from 'react';
 
-const PhotoItem = () => {
+const PhotoItem = ({ photo }) => {
+    console.log(photo)
     return (  
         <div>Item</div>
+        
     );
 }
  
